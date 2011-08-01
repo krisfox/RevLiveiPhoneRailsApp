@@ -1,0 +1,23 @@
+<% banner "Study Session: #{h(@study_session.subject)}: #{h(@study_session.title)}", 
+link_to('Edit', edit_study_session_path(@study_session)),
+link_to('Delete', @study_session, :confirm => 'Sure?', :method => :delete) %>
+
+
+<p><strong>Subject:</strong> <%= @study_session.subject %></p>
+<p><strong>Title:</strong> <%= @study_session.title %></p>
+<p><strong>Starts at:</strong> <%= @study_session.starts_at.strftime("%x") %></p>
+<p><strong>Notes:</strong> <%= @study_session.notes %></p>
+<% @study_session.photos.each do |photo| %>
+	<%= link_to image_tag(photo.photo.url(:thumb)), photo.photo.url, :target => "_blank" %>
+	<%= link_to "Delete", [@study_session, photo], :confirm => "Sure?", :method => :delete %>
+<% end %>
+<p><strong>Add photo:</strong>
+	<%= form_for([@study_session, @photo], :html => { :multipart => true }) do |f| %>
+	<fieldset>  
+		<%= f.error_messages %>
+		<%= f.file_field :photo %>
+		<%= f.submit %>
+	</fieldset>
+	<% end %>
+
+<%= link_to "View all", study_sessions_path %>

@@ -1,0 +1,10 @@
+<%= labeled_form_for @study_session do |f| %>
+<fieldset>  
+  <%= f.error_messages %>
+  <%= f.text_field :subject %>
+  <%= f.text_field :title %>  
+  <%= f.datetime_select :starts_at, :include_blank => true %>
+  <%= f.text_area :notes %>
+  <%= f.submit %>
+</fieldset>
+<% end %>

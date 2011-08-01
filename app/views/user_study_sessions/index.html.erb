@@ -1,0 +1,18 @@
+<% banner 'My Study Sessions', link_to('Join Study Sessions', study_sessions_path) %>
+           
+<% unless @study_sessions.any? %>
+<p class="empty">
+  No study sessions (yet).  Go on, <%= link_to('join one already!', study_sessions_path) %>
+</p>
+<% end %>
+  
+<table id="study_sessions-table">
+<% @study_sessions.each do |ss| %>
+  <tr>
+    <td><%= link_to ss.title, ss %></td>
+	<td><%= ss.subject %></td>
+	<td><%= time_ago_in_words(ss.starts_at) %></td>
+	<td><%= link_to('Leave', user_study_sessions_path(:study_session_id => ss.id), :method => :delete) %></td>
+  </tr>
+<% end %>
+</table>
