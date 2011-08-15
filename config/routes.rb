@@ -1,6 +1,7 @@
 # START:routes
 Saveup::Application.routes.draw do |map|
 
+	resources :mobile
 	resources :goals do
 		resources :credits
 	end
