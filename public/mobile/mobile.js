@@ -36,7 +36,7 @@ TeacherApp = new Ext.Application({
 					xtype: 'fieldset',
 					instructions: 'Please enter the information above.',
 					defaults: {
-						labelWidth: '35%'
+						labelWidth: '45%'
 					},
 					items: [{
 						xtype: 'textfield',
@@ -304,7 +304,7 @@ TeacherApp = new Ext.Application({
 			fullscreen: true,
 			layout: 'card',
 			cardSwitchAnimation: 'slide',
-			items: [TeacherApp.eventDetailPanel, TeacherApp.loginPanel, TeacherApp.mainMenu, TeacherApp.eventsListPanel, TeacherApp.detailPanel]
+			items: [TeacherApp.loginPanel, TeacherApp.mainMenu, TeacherApp.eventsListPanel, TeacherApp.detailPanel, TeacherApp.eventDetailPanel]
 		})
 
 
