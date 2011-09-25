@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=9, IE=8, chrome=1">
+  	<title><%= @page_title %></title>
+  <%= stylesheet_link_tag 'jeopardy', 'http://fonts.googleapis.com/css?family=Holtwood+One+SC' %>
+  <%= javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js' %>
+  <%= javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js' %>
+  <%= javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/webfont/1.0.22/webfont.js' %>
+
+</head>
+<body>
+	<%= yield %>
+</body>
+</html>

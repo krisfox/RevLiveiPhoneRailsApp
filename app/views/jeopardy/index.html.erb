@@ -1,0 +1,45 @@
+<div class="board">
+	<div class="categories wrap">
+		<% 1.upto(5) do |category| %>
+			<div class="category">
+				<div class="title">Category <%= category %></div>
+			</div>
+		<% end %>
+		<div class="clear"></div>
+	</div>
+	<div class="clear"></div>
+
+	<div class="questions wrap">
+		<% 1.upto(5) do |category| %>
+			<div class="category">
+				<% 1.upto(5) do |question| %>
+					<div class="question">
+						<div class="points">
+							<p><%= question * 100 %></p>
+						</div>
+						<div class="text">
+							<p><%= link_to_function "X", "close_question(this);"%></p>
+							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.</p>
+						</div>
+					</div>
+				<% end %>
+			</div>
+		<% end %>
+		<div class="clear"></div>
+	</div>
+</div>
+
+<script>
+	$('.points').bind('click', function() {
+		question = $(this).parent().find('.text');
+		question.css('opacity',0).css('visibility','visible')
+		question.css('width', $(this).width()).css('height', $(this).height())
+		question.css('top', $(this).offset().top).css('left', $(this).offset().left)
+		question.animate({'opacity': 1, 'left':0, 'top':0, 'width':$(document).width(), 'height':$(document).height()}, 500)
+		console.log(question)
+	})
+	function close_question(elem) {
+		console.log($(elem).closest('.text'))
+		$(elem).closest('.text').fadeOut();
+	}
+</script>

@@ -1,0 +1,61 @@
+/* @override 
+	http://localhost:3000/stylesheets/jeopardy.css?1316922117
+*/
+
+.clear {
+	clear:  both;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+}
+.board {
+	border-top: 10px solid #965e3e;
+	padding: 10px;
+	background-color: #dbac84;
+}
+.wrap {
+	background-color: black;
+	margin-bottom: 10px;
+}
+.categories {
+	margin-bottom: 10px;
+}
+.categories .category .title, .question .points {
+	height: 100px;
+	background: #062197;
+	margin: 10px;
+	color: white;
+}
+.category {
+	float:  left;
+	width: 20%;
+	vertical-align: middle;
+	text-align: center;
+	font-family: 'Holtwood One SC', serif;
+	font-size: 28;
+}
+
+.question .points {
+	font-family: 'Holtwood One SC', serif;
+	font-size: 48px;
+	line-height: 100px;
+	color: gold;
+	cursor: pointer;
+}
+.question .points p {
+	margin: 0;
+}
+.question .text {
+	font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	color: black;
+	position: absolute;
+	background-color: white;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	opacity: 0;
+	visibility: hidden;
+}

@@ -1,6 +1,8 @@
 # START:routes
 Saveup::Application.routes.draw do |map|
 
+	resources :jeopardy
+	
 	resources :mobile
 	resources :goals do
 		resources :credits
