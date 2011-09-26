@@ -1,3 +1,10 @@
+<% content_for :javascripts do %>
+	<%= stylesheet_link_tag 'jeopardy' %>
+	<%= stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Holtwood+One+SC' %>
+	<%= stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Rock+Salt' %>
+	<%= stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Kelly+Slab' %>
+
+<% end %>
 <div class="board">
 	<div class="categories wrap">
 		<% 1.upto(5) do |category| %>
@@ -18,14 +25,37 @@
 							<p><%= question * 100 %></p>
 						</div>
 						<div class="text">
-							<p><%= link_to_function "X", "close_question(this);"%></p>
-							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.</p>
+							<div class="centered_box">
+								<p><%= link_to_function "X", "close_question(this);"%></p>
+								<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.</p>
+							</div>
 						</div>
 					</div>
 				<% end %>
 			</div>
 		<% end %>
 		<div class="clear"></div>
+	</div>
+	
+	<div class="teams three">
+		<div class="team">
+			<div class="points", id="team_1">
+				0
+			</div>
+			<div class="name">Team 1</div>
+		</div>
+		<div class="team">
+			<div class="points", id="team_2">
+				0
+			</div>
+			<div class="name">Team 2</div>
+		</div>
+		<div class="team">
+			<div class="points", id="team_3">
+				0
+			</div>
+			<div class="name">Team 3</div>
+		</div>
 	</div>
 </div>
 

@@ -1,5 +1,8 @@
 /* @override 
 	http://localhost:3000/stylesheets/jeopardy.css?1316922117
+	http://localhost:4001/stylesheets/jeopardy.css?1317054418
+	http://localhost:4001/stylesheets/jeopardy.css?1317055475
+	http://localhost:4001/stylesheets/jeopardy.css?1317056330
 */
 
 .clear {
@@ -57,5 +60,37 @@ body {
 	right: 0;
 	bottom: 0;
 	opacity: 0;
+	overflow: hidden;
 	visibility: hidden;
+}
+.question .text .centered_box {
+	width: 500px;
+	height: 500px;
+	left: 50%;
+	position: fixed;
+	margin-left: -250px;
+	margin-top: -250px;
+	top: 50%;
+}
+
+.teams.three .team {
+	width: 33%;
+	float: left;
+
+}
+.teams .team .points {
+	text-align: right;
+	font-family: 'Kelly Slab', cursive;
+	font-size: 48px;
+	font-weight: bold;
+	color: white;
+	background-color: #252525;
+	margin: 20px;
+	padding: 2px 20px;
+}
+.teams .team .name {
+	font-family: 'Rock Salt', cursive;
+	font-size: 24px;
+	text-align: center;
+	margin: 20px;
 }
