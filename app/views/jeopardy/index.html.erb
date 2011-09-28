@@ -3,7 +3,7 @@
 	<%= stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Holtwood+One+SC' %>
 	<%= stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Rock+Salt' %>
 	<%= stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Kelly+Slab' %>
-
+	<%= javas%>
 <% end %>
 <div class="board">
 	<div class="categories wrap">
@@ -28,6 +28,7 @@
 							<div class="centered_box">
 								<p><%= link_to_function "X", "close_question(this);"%></p>
 								<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.</p>
+
 							</div>
 						</div>
 					</div>
@@ -59,17 +60,3 @@
 	</div>
 </div>
 
-<script>
-	$('.points').bind('click', function() {
-		question = $(this).parent().find('.text');
-		question.css('opacity',0).css('visibility','visible')
-		question.css('width', $(this).width()).css('height', $(this).height())
-		question.css('top', $(this).offset().top).css('left', $(this).offset().left)
-		question.animate({'opacity': 1, 'left':0, 'top':0, 'width':$(document).width(), 'height':$(document).height()}, 500)
-		console.log(question)
-	})
-	function close_question(elem) {
-		console.log($(elem).closest('.text'))
-		$(elem).closest('.text').fadeOut();
-	}
-</script>
